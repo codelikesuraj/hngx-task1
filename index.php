@@ -58,8 +58,8 @@ if (empty($track)) {
 http_response_code(SUCCESS);
 echo json_encode([
     "slack_name" => $slack_name,
-    "current_day" => "Monday",
-    "utc_time" => "2023-08-21T15:04:05Z",
+    "current_day" => date('l', time()),
+    "utc_time" => date("Y-m-d\TH:i:s\Z", time()),
     "track" => $track,
     "github_file_url" => "https://github.com/codelikesuraj/hngx-task1/blob/main/index.php",
     "github_repo_url" => "https://github.com/codelikesuraj/hngx-task1",
