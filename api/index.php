@@ -26,7 +26,7 @@ if (!isset($_GET['slack_name'])) {
     exit();
 }
 
-$slack_name = strval(trim($_GET['slack_name']));
+$slack_name = strval(trim(htmlentities($_GET['slack_name'])));
 if (empty($slack_name)) {
     http_response_code(VALIDATION_ERROR);
     echo json_encode([
@@ -45,7 +45,7 @@ if (!isset($_GET['track'])) {
     exit();
 }
 
-$track = strval(trim($_GET['track']));
+$track = strval(trim(htmlentities($_GET['track'])));
 if (empty($track)) {
     http_response_code(VALIDATION_ERROR);
     echo json_encode([
@@ -61,7 +61,7 @@ echo json_encode([
     "current_day" => date('l', time()),
     "utc_time" => date("Y-m-d\TH:i:s\Z", time()),
     "track" => $track,
-    "github_file_url" => "https://github.com/codelikesuraj/hngx-task1/blob/main/index.php",
+    "github_file_url" => "https://github.com/codelikesuraj/hngx-task1/blob/main/api/index.php",
     "github_repo_url" => "https://github.com/codelikesuraj/hngx-task1",
     "status_code" => SUCCESS
 ]);
