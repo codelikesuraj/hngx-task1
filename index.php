@@ -26,7 +26,7 @@ if (!isset($_GET['slack_name'])) {
     exit();
 }
 
-$slack_name = trim($_GET['slack_name']);
+$slack_name = strval(trim($_GET['slack_name']));
 if (empty($slack_name)) {
     http_response_code(VALIDATION_ERROR);
     echo json_encode([
@@ -45,7 +45,7 @@ if (!isset($_GET['track'])) {
     exit();
 }
 
-$track = trim($_GET['track']);
+$track = strval(trim($_GET['track']));
 if (empty($track)) {
     http_response_code(VALIDATION_ERROR);
     echo json_encode([

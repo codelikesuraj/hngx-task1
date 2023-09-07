@@ -1,7 +1,6 @@
 # HNGx Backend track - Task 1
 
 ## Objective
-
 Create and host an endpoint using any programming language of your choice.
 The endpoint should take two GET request query parameters and return specific information in JSON format.
 
@@ -42,3 +41,5 @@ The information required includes:
 - Ensure the endpoint is accessible.
 - Check the returned JSON against the defined format.
 - Validate the correctness of each data point in the JSON response.
+
+## Live URL: https://hngx-task1-a57f808ca828.herokuapp.com
